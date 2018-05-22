@@ -1,7 +1,9 @@
+require("dotenv").config();
 const express = require("express");
 const { json } = require("body-parser");
 const cors = require("cors");
 const graphqlHTTP = require("express-graphql");
+const massive = require("massive");
 
 const { schema, root } = require(`${__dirname}/graphql/schema`);
 
